@@ -180,3 +180,40 @@ footer a {
 footer p {
     margin-top: 5px;
 }
+
+@media (max-width: 750px) {
+    #nav-bar {
+        margin: 0 auto;
+    }
+
+    #nav-bar ul {
+        list-style-type: none;
+        margin-right: 10px;
+    }
+    
+    #nav-bar li {
+        text-align: left;
+        display: block;
+    }
+    
+    #nav-bar a {
+        font-size: 3vw;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    #packages {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+        margin-top: 50px;
+    }
+
+    .packages {
+        margin: 30px 0;
+    }
+}
