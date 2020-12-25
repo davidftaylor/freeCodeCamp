@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+h1, #description {
+  text-align: center;
+  color: rgb(242, 239, 47);
+  text-shadow: 2px 2px #000;
+}
+
+p {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-size: cover;
+  background-image: linear-gradient(rgba(45, 100, 189, 0.6), rgba(45, 100, 189, 0.6)), url("https://blog.gunassociation.org/wp-content/uploads/2016/02/blue-viper-venomous-poisonous-snake-Venomous-Snakes-ss-Featured.jpg");
+}
+
+form {
+  border: solid rgba(45, 100, 189, 0.8) 3px;
+  //border-radius: 2.25rem;
+  margin: 0 auto;
+  width: 60%;
+  background: linear-gradient(rgba(45, 100, 189, 0.8), rgba(45, 100, 189, 0.8));
+}
+
+.form-group {
+  display: block;
+  width: 80%;
+  margin: 35px auto;
+}
+
+.form-control {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 0.25rem;
+  height: 30px;
+  font-family: inherit;
+}
+
+label {
+  font-size: 1.125rem;
+  color: rgb(242, 239, 47);
+  text-shadow: 2px 2px #000;
+  //display: block;
+}
+
+.radio, .checkbox {
+  display: block;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 75px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  background-color: forestgreen;
+  color: white;
+  font-family: inherit;
+  border: none;
+  height: 50px;
+  width: 75%;
+}

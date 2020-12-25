@@ -1,0 +1,82 @@
+body {
+  background: hsl(0, 0%, 65%);
+  font-family: Helvetica;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: Didot;
+  font-size: 50px;
+  text-shadow: 3px 3px #000;
+  color: white;
+  margin: auto;
+  padding: 15px;
+}
+
+h2 {
+  font-size: 30px;
+  text-shadow: 2px 2px #000;
+}
+
+figure {
+  background: rgb(50, 0, 0);
+}
+
+#image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  border: solid black 2px;
+}
+
+figcaption {
+  font-size: 13px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+#tribute-info {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  padding: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#quotes {
+  display: flex;
+  flex-direction: column;
+}
+
+#quote1, #quote2, #quote3 {
+  padding: 50px;
+}
+
+h3 {
+  font-family: Didot;
+  color: rgb(50, 0, 0);
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 25px;
+}
+
+li {
+  font-family: Helvetica;
+}
+
+#quotes {
+  text-align: center;
+}
+
+#link {
+  display: inline-block;
+  align-self: flex-end;
+  padding: 80px;
+}
