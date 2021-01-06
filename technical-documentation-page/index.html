@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav id="navbar">
+    <header>JS Regex Documentation (from freeCodeCamp)</header>
+    <ul>
+    <li><a class="nav-link" href="#Introduction_to_Regular_Expressions_in_JavaScript">Introduction to Regular Expressions in JavaScript</a></li>
+    <li><a class="nav-link" href="#Using_the_Test_Method_and_Matching_Literal_Strings">Using the Test Method and Matching Literal Strings</a> </li>
+    <li><a class="nav-link" href="#Match_a_Literal_String_with_Different_Possibilities">Match a Literal String with Different Possibilities</a></li>
+    <li><a class="nav-link" href="#Ignore_Case_While_Matching">Ignore Case While Matching</a></li>
+    <li><a class="nav-link" href="#Extract_Matches">Extract Matches</a></li>
+    <li><a class="nav-link" href="#Find_More_Than_the_First_Match">Find More Than the First Match</a></li>
+    <li><a class="nav-link" href="#Match_Anything_with_Wildcard_Period">Match Anything with Wildcard Period</a></li>
+    <li><a class="nav-link" href="#Match_Single_Character_with_Multiple_Possibilities">Match Single Character with Multiple Possibilities</a></li>
+    <li><a class="nav-link" href="#Match_Letters_of_the_Alphabet">Match Letters of the Alphabet</a></li>
+    <li><a class="nav-link" href="#Match_Numbers_and_Letters_of_the_Alphabet">Match Numbers and Letters of the Alphabet</a></li>
+    <li><a class="nav-link" href="#Cheatsheet">Cheatsheet</a></li>
+    </ul>
+    </nav>
+
+    <main id="main-doc">
+    
+    <section class="main-section" id="Introduction_to_Regular_Expressions_in_JavaScript">
+    <header>Introduction to Regular Expressions in JavaScript</header>
+    <p>Regular expressions are special strings that represent a search pattern.
+    Also known as "regex" or "regexp", they help programmers match, search, and replace text.
+    Regular expressions can appear cryptic because a few characters have special meaning.
+    The goal is to combine the symbols and text into a pattern that matches what you want, but only what you want.
+    This section will cover the characters, a few shortcuts, and the common uses for writing regular expressions.</p>
+    </section>
+
+    <section class="main-section" id="Using_the_Test_Method_and_Matching_Literal_Strings">
+    <header>Using the Test Method and Matching Literal Strings</header>
+    <p>Regular expressions are used in programming languages to match parts of strings.
+    You create patterns to help you do that matching.
+    If you want to find the word <code>"the"</code> in the string <code>"The dog chased the cat"</code>,
+    you could use the following regular expression: <code>/the/</code>.
+    Notice that quote marks are not required within the regular expression.
+    JavaScript has multiple ways to use regexes.
+    One way to test a regex is using the <code>.test()</code> method.
+    The <code>.test()</code> method takes the regex, applies it to a string (which is placed inside the parentheses),
+    and returns <code>true</code> or <code>false</code> if your pattern finds something or not.</p>
+    </section>
+
+    <section class="main-section" id="Match_a_Literal_String_with_Different_Possibilities">
+    <header>Match a Literal String with Different Possibilities</header>
+    <p>Using regexes like <code>/coding/</code>, you can look for the pattern <code>"coding"</code> in another string.
+    This is powerful to search single strings, but it's limited to only one pattern.
+    You can search for multiple patterns using the <code>alternation</code> or <code>OR</code> operator: <code>|</code>.
+    This operator matches patterns either before or after it.
+    For example, if you wanted to match <code>"yes"</code> or <code>"no"</code>, the regex you want is <code>/yes|no/</code>.
+    You can also search for more than just two patterns.
+    You can do this by adding more patterns with more <code>OR</code> operators separating them, like <code>/yes|no|maybe/</code>.</p>
+    </section>
+
+    <section class="main-section" id="Ignore_Case_While_Matching">
+    <header>Ignore Case While Matching</header>
+    <p>Up until now, you've looked at regexes to do literal matches of strings.
+    But sometimes, you might want to also match case differences.
+    Case (or sometimes letter case) is the difference between uppercase letters and lowercase letters.
+    Examples of uppercase are <code>"A"</code>, <code>"B"</code>, and <code>"C"</code>.
+    Examples of lowercase are <code>"a"</code>, <code>"b"</code>, and <code>"c"</code>.
+    You can match both cases using what is called a flag.
+    There are other flags but here you'll focus on the flag that ignores case - the <code>i</code> flag.
+    You can use it by appending it to the regex. An example of using this flag is <code>/ignorecase/i</code>.
+    This regex can match the strings <code>"ignorecase"</code>, <code>"igNoreCase"</code>, and <code>"IgnoreCase"</code>.</p>
+    </section>
+
+    <section class="main-section" id="Extract_Matches">
+    <header>Extract Matches</header>
+    <p>You can also extract the actual matches you found with the <code>.match()</code> method.
+    To use the <code>.match()</code> method, apply the method on a string and pass in the regex inside the parentheses.</p>
+    </section>
+
+    <section class="main-section" id="Find_More_Than_the_First_Match">
+    <header>Find More Than the First Match</header>
+    <p>So far, you have only been able to extract or search a pattern once.
+    To search or extract a pattern more than once, you can use the <code>g</code> flag.
+    You can have multiple flags on your regex like <code>/search/gi</code></p>
+    </section>
+
+    <section class="main-section" id="Match_Anything_with_Wildcard_Period">
+    <header>Match Anything with Wildcard Period</header>
+    <p>Sometimes you won't (or don't need to) know the exact characters in your patterns.
+    Thinking of all words that match, say, a misspelling would take a long time.
+    Luckily, you can save time using the wildcard character: <code>.</code><br><br>
+    The wildcard character <code>.</code> will match any one character.
+    The wildcard is also called <code>dot</code> and <code>period</code>.
+    You can use the wildcard character just like any other character in the regex.
+    For example, if you wanted to match <code>"hug"</code>, <code>"huh"</code>, <code>"hut"</code>, and <code>"hum"</code>, you can use the regex <code>/hu./</code> to match all four words.</p>
+    </section>
+
+    <section class="main-section" id="Match_Single_Character_with_Multiple_Possibilities">
+    <header>Match Single Character with Multiple Possibilities</header>
+    <p>You learned how to match literal patterns (<code>/literal/</code>) and wildcard character (<code>/./</code>).
+        Those are the extremes of regular expressions, where one finds exact matches and the other matches everything.
+        There are options that are a balance between the two extremes.
+        You can search for a literal pattern with some flexibility with character classes.
+        Character classes allow you to define a group of characters you wish to match by placing them inside square (<code>[</code> and <code>]</code>) brackets.
+        For example, you want to match <code>"bag"</code>, <code>"big"</code>, and <code>"bug"</code> but not <code>"bog"</code>.
+        You can create the regex <code>/b[aiu]g/</code> to do this.
+        The <code>[aiu]</code> is the character class that will only match the characters <code>"a"</code>, <code>"i"</code>, or <code>"u"</code>.</p>
+    </section>
+
+    <section class="main-section" id="Match_Letters_of_the_Alphabet">
+        <header>Match Letters of the Alphabet</header>
+        <p>You saw how you can use <em>character sets</em> to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet).
+        Fortunately, there is a built-in feature that makes this short and simple.
+        Inside a character set, you can define a range of characters to match using a hyphen character: <code>-</code>.
+        For example, to match lowercase letters <code>a</code> through <code>e</code> you would use <code>[a-e]</code>.</p>
+    </section>
+
+    <section class="main-section" id="Match_Numbers_and_Letters_of_the_Alphabet">
+    <header>Match Numbers and Letters of the Alphabet</header>
+    <p>Using the hyphen (<code>-</code>) to match a range of characters is not limited to letters.
+        It also works to match a range of numbers.
+        For example, <code>/[0-5]/</code> matches any number between <code>0</code> and <code>5</code>, including the <code>0</code> and <code>5</code>.
+        Also, it is possible to combine a range of letters and numbers in a single character set, as in the regex <code>/[a-z0-9]/ig</code>.</p>
+    </section>
+
+    <section class="main-section" id="Cheatsheet">
+        <header>Cheatsheet</header>
+        <p>Flags include:</p>
+        <ul>
+            <li><code>g</code> (for <em>global</em>)</li>
+            <li><code>i</code> (for <em>insensitive to case</em> or <em>ignore case</em>)</li>
+        </ul>
+        <p>Methods include:</p>
+        <ul>
+            <li><code>.test()</code> (Acts on regex and takes string as argument, returns <code>true</code> or <code>false</code>)</li>
+            <li><code>.match()</code> (Acts on string and takes regex as argument, returns array of matching patterns or <code>null</code>)</li>
+        </ul>
+        <p>Other regex features include:</p>
+        <ul>
+        <li><code>.</code> (The wildcard period, which matches any single character)</li>
+        </ul>
+    </section>
+    </main>
+</body>
+</html>
